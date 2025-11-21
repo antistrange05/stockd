@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      "https://api.open-meteo.com/v1/forecast?latitude=40.4862&longitude=-74.4518&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation&timezone=America%2FNew_York&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch"
+    )
+      .then((response) => response.json())
+      .then((data) => setWeather(data))
+      .catch((error) => console.error("Error fetching weather data:", error));
+  }, [setWeather]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1>Weather App</h1>
+      {weather ? (
+        <div>
+          <h2>Current Weather</h2>
+          <p>Temperature: {weather.current.temperature_2m}°F</p>
+          <p>Apparent Temperature: {weather.current.apparent_temperature}°F</p>
+          <p>Relative Humidity: {weather.current.relative_humidity_2m}%</p>
+          <p>
+            Precipitation:{" "}
+            {weather.current.precipitation} inches
+          </p>
+        </div>
+      ) : (
+        <p>Loading weather data...</p>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
