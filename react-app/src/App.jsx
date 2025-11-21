@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <h1>Weather App</h1>
+      <h1>stock'd</h1>
       {weather ? (
         <div>
           <h2>Current Weather</h2>
