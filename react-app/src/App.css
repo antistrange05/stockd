@@ -70,3 +70,125 @@
   color: #333;
   font-size: 1.1rem;
 }
+
+#shelf ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#shelf li {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#shelf li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#shelf li strong {
+  color: #646cff;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+#shelf li span {
+  color: #666;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+#shelf p {
+  color: #999;
+  font-style: italic;
+}
+
+.form-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.form-page h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  background-color: rgb(255, 250, 240);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-buttons button:first-child {
+  background-color: #646cff;
+  color: white;
+}
+
+.form-buttons button:first-child:hover {
+  background-color: #535ac8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 108, 255, 0.3);
+}
+
+.form-buttons button:last-child {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.form-buttons button:last-child:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
