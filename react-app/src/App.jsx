@@ -16,7 +16,12 @@ function App() {
   return (
     <div>
       <h1>stock'd</h1>
-      <p>your handy pantry tracker app</p>
+      <p>your handy pantry tracker app!</p>
+      <button>add your first item</button>
+      
+
+
+
     </div>
   );
 }
