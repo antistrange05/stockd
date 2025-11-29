@@ -1,64 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
-#root {
-  max-width: 100%;
-  display: flex;
-  padding: 2rem;
-  margin: 0x auto;
-  text-align: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  font-family: 'Arvo', serif;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #fff6f4;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 10rem;
+  text-align: center;
+  font-family: 'Arvo', serif;
 }
 
 #pantry {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
-  width: 95%;
-  max-width: 1600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
   padding: 1rem;
 }
 
 #pantry > div {
   flex: 1;
+  max-width: 450px;
   background-color: #fae1dd;
   border-radius: 12px;
   border: 2px solid #ddd;
@@ -66,7 +39,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 
 #pantry h3 {
   margin-top: 0;
@@ -96,13 +68,13 @@
 }
 
 #shelf li.selected {
-  background-color: #e8ebff;
-  border: 2px solid #646cff;
-  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+  background-color: #e9f2ed;
+  border: 2px solid #D8E2DC;
+  box-shadow: 0 4px 12px #94a099;
 }
 
 #shelf li strong {
-  color: #646cff;
+  color: #7ba28a;
   font-size: 1.1rem;
   display: block;
   margin-bottom: 0.25rem;
@@ -120,26 +92,25 @@
 }
 
 .form-page {
-  max-width: 100%;
+  max-width: 700px;
+  width: 100%;
   margin: 2rem auto;
   padding: 2rem;
-}
-
-.form-page h1 {
-  color: #333;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .form-container {
   background-color: rgb(255, 250, 240);
   border-radius: 16px;
   padding: 2.5rem;
+  margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
   margin-bottom: 1.5rem;
   text-align: left;
+  width: 100%;
 }
 
 .form-group label {
@@ -162,11 +133,12 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #646cff;
+  border-color: #d8e2dc;
 }
 
 .form-buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -183,14 +155,14 @@
 }
 
 .form-buttons button:first-child {
-  background-color: #646cff;
-  color: white;
+  background-color: #d8e2dc;
+  color: rgb(87, 84, 84);
 }
 
 .form-buttons button:first-child:hover {
-  background-color: #535ac8;
+  background-color: #d8e2dc;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(100, 108, 255, 0.3);
+  box-shadow: 0 4px 8px #8a978f;
 }
 
 .form-buttons button:last-child {
@@ -202,3 +174,54 @@
   background-color: #e0e0e0;
   transform: translateY(-2px);
 }
+
+.nutrition-facts {
+  width: 260px;
+  background: white;
+  padding: 16px;
+  border: 4px solid #d8e2dc;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.nutrition-facts h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 8px 0;
+  border-bottom: 8px solid black;
+  padding-bottom: 4px;
+}
+
+.nutrition-facts .serving-info {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.nutrition-facts hr {
+  border: none;
+  border-top: 2px solid black;
+  margin: 6px 0;
+}
+
+.nutrient-list {
+  font-size: 14px;
+}
+
+.nutrient-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.nutrient-item .nutrient-name {
+  font-weight: bold;
+}
+
+.nutrient-item.big {
+  font-size: 18px;
+  font-weight: 900;
+  border-top: 4px solid black;
+  padding-top: 6px;
+  margin-top: 4px;
+}
+

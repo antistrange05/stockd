@@ -134,7 +134,7 @@ if (showForm) {
     <div>
       <h1>stock'd</h1>
       <p>your handy pantry tracker app!</p>
-      <button id = "add-item" onClick = {() => setShowForm(true)}>add your first item</button>
+      <button id = "add-item" onClick = {() => setShowForm(true)}>add item</button>
       
       <section id = "pantry">
         <div id = "shelf"> {/* holds all items */}
