@@ -4,12 +4,12 @@
   max-width: 100%;
   display: flex;
   padding: 2rem;
-  margin: 100px auto;
+  margin: 0x auto;
   text-align: center;
   justify-content: flex-start;
   min-height: 100vh;
   font-family: 'Arvo', serif;
-  background-color: 
+  background-color: #fff6f4;
 }
 
 .logo {
@@ -59,7 +59,7 @@
 
 #pantry > div {
   flex: 1;
-  background-color: rgb(255, 255, 224);
+  background-color: #fae1dd;
   border-radius: 12px;
   border: 2px solid #ddd;
   padding: 2rem;
@@ -120,7 +120,7 @@
 }
 
 .form-page {
-  max-width: 500px;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 2rem;
 }
