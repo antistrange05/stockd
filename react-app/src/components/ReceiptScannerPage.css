@@ -1,0 +1,67 @@
+/* src/components/ReceiptScannerPage.css */
+
+.scanner-container {
+  max-width: 600px;
+}
+
+.drop-zone {
+border: 3px dashed #ccc;
+border-radius: 12px;
+padding: 20px;
+margin-bottom: 20px;
+text-align: center;
+transition: all 0.3s ease;
+min-height: 250px; /* Increased height for preview */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #fafafa;
+position: relative;
+overflow: hidden;
+}
+
+.drop-zone:hover {
+border-color: #7ba28a;
+background-color: #f7fffb;
+}
+
+/* NEW: Image Preview Styles */
+.receipt-preview-img {
+max-width: 100%;
+max-height: 300px;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+margin-bottom: 15px;
+border: 2px solid #fff;
+}
+
+.preview-state p {
+margin: 5px 0;
+color: #333;
+}
+
+.change-text {
+font-size: 0.85rem;
+color: #888 !important;
+text-decoration: underline;
+}
+
+.icon {
+font-size: 3rem;
+margin-bottom: 10px;
+}
+
+.sub-text {
+font-size: 0.9rem;
+color: #999;
+margin-top: 5px;
+}
+
+.error-message {
+margin-bottom: 20px;
+padding: 10px;
+background-color: #ffebee;
+border-radius: 8px;
+border: 1px solid #ffcdd2;
+}
