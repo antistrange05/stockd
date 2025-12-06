@@ -1,7 +1,2 @@
-# blueprint-final-project
-hi
-
-roaaarrrr
-what's up
-
-hi
+# stock'd
+a clean solution for your home pantry inventory management problems!
