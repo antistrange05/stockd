@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd react-app && npm install && npm run build",
-  "outputDirectory": "react-app/dist",
-  "installCommand": "npm install --prefix react-app"
-}
